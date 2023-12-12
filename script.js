@@ -18,5 +18,7 @@ document.getElementById('blessingButton').addEventListener('click', function() {
         document.getElementById('blessingText').textContent = blessing;
         isButtonClicked = true; // 更新按鈕點擊狀態
         this.disabled = true; // 禁用按鈕
+        localStorage.setItem('buttonClicked', 'true'); // 在本地存儲中設置標記
     }
 });
+checkButtonStatus(); // 在頁面加載時檢查按鈕狀態
