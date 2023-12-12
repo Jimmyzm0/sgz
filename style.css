@@ -18,6 +18,25 @@ body {
     margin: auto;
     max-width: 400px;
     animation: cardEntry 1s ease-in-out; /* 卡片進入動畫 */
+    text-align: center;
+}
+h1, #blessingText {
+    background-color: rgba(255, 255, 255, 0.9); /* 轻微透明的白色背景 */
+    border: 2px solid #D50000; /* 红色边框 */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 轻微的阴影 */
+    margin: 10px 0; /* 添加一些外边距 */
+}
+
+h1 {
+    font-size: 2em; /* 增大标题字体 */
+    color: #D50000; /* 调整颜色以匹配边框 */
+}
+
+#blessingText {
+    font-size: 1.2em; /* 稍微增大文字大小 */
+    color: #333; /* 深色文字 */
 }
 
 @keyframes cardEntry {
