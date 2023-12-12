@@ -68,8 +68,8 @@ button:disabled {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 30%;
+    height: 30%;
     background-image: url('images/雪花.jpg'); /* 替換為您的雪花圖片路徑 */
     background-repeat: repeat;
     background-position: center;
