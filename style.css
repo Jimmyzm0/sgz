@@ -16,6 +16,7 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     margin: auto;
     max-width: 400px;
+    transition: transform 0.3s ease-in-out; /* 添加過渡效果使卡片平滑出現 */
 }
 
 h1 {
@@ -30,9 +31,38 @@ button {
     border-radius: 5px;
     font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; /* 鼠標懸停時改變按鈕背景色 */
 }
 
 button:hover {
     background-color: darkgreen;
+}
+
+button:disabled {
+    background-color: grey;
+    cursor: default; /* 禁用按鈕時改變鼠標指針 */
+}
+
+/* 響應式設計的媒體查詢，適應小屏幕設備 */
+@media (max-width: 600px) {
+    #card {
+        padding: 20px;
+        max-width: 100%;
+    }
+}
+
+/* 基本的動畫效果，使卡片有動態出現的感覺 */
+#card {
+    animation: cardEntry 1s ease-in-out;
+}
+
+@keyframes cardEntry {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
