@@ -62,5 +62,28 @@ button:disabled {
         max-width: 100%;
     }
 }
+.snowflake {
+    color: #FFF;
+    font-size: 2em;
+    position: fixed;
+    top: -10%;
+    /* 給每個雪花隨機水平位置 */
+    left: calc(5% + 90% * var(--random));
+    opacity: var(--opacity);
+    transform: scale(var(--scale));
+    /* 隨機下落速度 */
+    animation: fall var(--duration) linear infinite;
+}
 
+/* 動畫：雪花下落 */
+@keyframes fall {
+    0% { top: -10%; }
+    100% { top: 100%; }
+}
+
+/* 為每個雪花生成隨機特性 */
+.snowflake:nth-child(1) { --random: 0.1; --duration: 10s; --opacity: 0.7; --scale: 0.6; }
+.snowflake:nth-child(2) { --random: 0.2; --duration: 12s; --opacity: 0.5; --scale: 0.8; }
+.snowflake:nth-child(3) { --random: 0.3; --duration: 11s; --opacity: 0.6; --scale: 0.7; }
+/* ...為更多的雪花添加不同的特性... */
 /* 可選擇添加其他節日裝飾 */
