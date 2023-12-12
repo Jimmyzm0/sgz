@@ -3,7 +3,6 @@ const blessings = [
     "願您的聖誕充滿溫馨、快樂、和平！",
     "希望聖誕老人給您帶來滿滿的幸福和笑容！",
     "在這個美好的節日裏，願您的每一天都閃耀著快樂的光芒！"
-    // 您可以根據需要添加更多祝福
 ];
 
 function getRandomBlessing() {
@@ -11,7 +10,13 @@ function getRandomBlessing() {
     return blessings[randomIndex];
 }
 
+let isButtonClicked = false; // 跟蹤按鈕是否已經被點擊
+
 document.getElementById('blessingButton').addEventListener('click', function() {
-    const blessing = getRandomBlessing();
-    document.getElementById('blessingText').textContent = blessing;
+    if (!isButtonClicked) {
+        const blessing = getRandomBlessing();
+        document.getElementById('blessingText').textContent = blessing;
+        isButtonClicked = true; // 更新按鈕點擊狀態
+        this.disabled = true; // 禁用按鈕
+    }
 });
