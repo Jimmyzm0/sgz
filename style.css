@@ -19,6 +19,12 @@ body {
     max-width: 400px;
     animation: cardEntry 1s ease-in-out; /* 卡片進入動畫 */
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* 轻微透明的白色背景增加可读性 */
+    border-radius: 10px; /* 圆角边框 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* 轻微的阴影效果 */
+    padding: 20px;
+    argin: auto;
+    max-width: 400px;
 }
 h1, #blessingText {
     background-color: rgba(255, 255, 255, 0.9); /* 轻微透明的白色背景 */
@@ -30,13 +36,17 @@ h1, #blessingText {
 }
 
 h1 {
-    font-size: 2em; /* 增大标题字体 */
-    color: #D50000; /* 调整颜色以匹配边框 */
+    color: #D50000; /* 圣诞红色 */
+    font-size: 2.5em; /* 增大标题字体大小 */
+    margin-bottom: 20px; /* 在标题和文本之间添加一些空间 */
 }
 
 #blessingText {
-    font-size: 1.2em; /* 稍微增大文字大小 */
-    color: #333; /* 深色文字 */
+    color: #333; /* 深色文字，增加对比 */
+    font-size: 1.2em; /* 适当的字体大小 */
+    padding: 15px; /* 内边距使文本更加舒展 */
+    background-color: rgba(255, 255, 255, 0.8); /* 轻微透明的背景增加层次感 */
+    border-radius: 5px; /* 轻微的圆角 */
 }
 
 @keyframes cardEntry {
@@ -63,6 +73,7 @@ button {
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px; /* 在按钮和文本之间添加一些空间 */
 }
 
 button:hover {
