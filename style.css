@@ -79,8 +79,9 @@ button:disabled {
 
 /* 雪花下落動畫 */
 @keyframes fall {
-    0% { top: -10%; }
-    100% { top: 100%; }
+    0% { top: -10%; opacity: 0; }
+    50% { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
 }
 
 /* 為每個雪花元素指定隨機特性 */
