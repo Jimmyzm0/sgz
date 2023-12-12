@@ -1,17 +1,21 @@
 body {
-    font-family: 'Cursive', sans-serif;
-    background-color: #f3f3f3;
+    font-family: 'Arial', sans-serif;
+    background-image: url('images/christmas-background.jpg'); /* 添加背景圖片 */
+    background-size: cover; /* 確保圖片覆蓋整個網頁 */
+    background-position: center; /* 將圖片置於中央 */
+    background-repeat: no-repeat; /* 避免背景圖片重複 */
     color: #333;
     text-align: center;
     padding: 20px;
 }
 
 #card {
-    background-image: url('christmas-background.jpg'); /* 替換成您的背景圖像路徑 */
-    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.8); /* 為了讓文字容易閱讀，設定卡片背景為半透明白色 */
     border-radius: 15px;
     padding: 40px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    max-width: 400px;
 }
 
 h1 {
