@@ -1,3 +1,4 @@
+/* 设置整个页面的字体和背景 */
 body {
     font-family: 'Cursive', sans-serif;
     background-image: url('images/christmas-background.jpg'); /* 添加背景圖片 */
@@ -7,9 +8,10 @@ body {
     color: #333;
     text-align: center;
     padding: 20px;
-    overflow: hidden; /* 防止在整個頁面上出現滾動條 */
+    overflow: hidden; /* 防止在整个页面上出现滚动条 */
 }
 
+/* 设置卡片的样式 */
 #card {
     background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
     border-radius: 15px;
@@ -21,16 +23,19 @@ body {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.9); /* 轻微透明的白色背景增加可读性 */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* 轻微的阴影效果 */
-    padding: 20px;
-    margin: auto;
-    max-width: 400px;
+    padding: 20px; /* 调整内边距 */
+    margin: auto; /* 水平居中 */
+    max-width: 400px; /* 设置最大宽度 */
 }
+
+/* 设置标题的样式 */
 h1 {
     color: #D50000; /* 圣诞红色 */
     font-size: 2.5em; /* 增大标题字体大小 */
     margin-bottom: 20px; /* 在标题和文本之间添加一些空间 */
 }
 
+/* 设置祝福文本的样式 */
 #blessingText {
     color: #333; /* 深色文字，增加对比 */
     font-size: 1.2em; /* 适当的字体大小 */
@@ -38,6 +43,7 @@ h1 {
     background-color: rgba(255, 255, 255, 0.8); /* 轻微透明的背景增加层次感 */
 }
 
+/* 设置按钮的样式 */
 button {
     background-color: green;
     color: white;
@@ -50,66 +56,22 @@ button {
     margin-top: 20px; /* 在按钮和文本之间添加一些空间 */
 }
 
+/* 鼠标悬停按钮时的样式 */
 button:hover {
     background-color: darkgreen;
     transform: scale(1.1);
 }
 
+/* 禁用按钮的样式 */
 button:disabled {
     background-color: grey;
     cursor: default;
 }
 
-/* 響應式設計 */
+/* 响应式设计 - 当屏幕宽度小于600px时 */
 @media (max-width: 600px) {
     #card {
         padding: 20px;
-        max-width: 100%;
-    }
-}
-
-/* 雪花樣式 */
-.snowflake {
-    position: absolute;
-    top: -10%;
-    left: calc(5% + 90% * var(--random)); /* 隨機位置 */
-    width: 20px; /* 雪花的寬度 */
-    height: 20px; /* 雪花的高度 */
-    background-image: url('images/雪花.png'); /* 雪花圖片 */
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: var(--opacity); /* 可以調整透明度 */
-    animation: fall var(--duration) linear infinite;
-}
-
-/* 雪花下落動畫 */
-@keyframes fall {
-    0% { top: -10%; opacity: 0; }
-    50% { opacity: 1; }
-    100% { top: 100%; opacity: 0; }
-}
-
-/* 為每個雪花元素指定隨機特性 */
-/* ...原有的雪花樣式和動畫代碼... */
-
-/* 為每個雪花元素指定隨機特性 */
-.snowflake:nth-child(1) { --random: 0.1; --duration: 10s; --opacity: 0.7; }
-.snowflake:nth-child(2) { --random: 0.2; --duration: 12s; --opacity: 0.5; }
-.snowflake:nth-child(3) { --random: 0.3; --duration: 11s; --opacity: 0.6; }
-.snowflake:nth-child(4) { --random: 0.4; --duration: 9s;  --opacity: 0.8; }
-.snowflake:nth-child(5) { --random: 0.5; --duration: 13s; --opacity: 0.4; }
-.snowflake:nth-child(6) { --random: 0.6; --duration: 8s;  --opacity: 0.9; }
-.snowflake:nth-child(7) { --random: 0.7; --duration: 14s; --opacity: 0.3; }
-.snowflake:nth-child(8) { --random: 0.8; --duration: 7s;  --opacity: 1.0; }
-.snowflake:nth-child(9) { --random: 0.9; --duration: 15s; --opacity: 0.2; }
-.snowflake:nth-child(10) { --random: 1.0; --duration: 6s; --opacity: 0.9; }
-/* ...根據需要添加更多的雪花... */
-}
-/* 响应式设计：适应小屏幕设备 */
-@media (max-width: 600px) {
-    #card {
-        padding: 20px;
-        margin: 10px;
         max-width: 100%;
     }
 
@@ -127,7 +89,7 @@ button:disabled {
     }
 }
 
-/* 针对中等屏幕大小的样式调整 */
+/* 响应式设计 - 当屏幕宽度在601px到1024px之间时 */
 @media (min-width: 601px) and (max-width: 1024px) {
     #card {
         padding: 30px;
@@ -138,7 +100,7 @@ button:disabled {
     }
 }
 
-/* 针对大屏幕大小的样式调整 */
+/* 响应式设计 - 当屏幕宽度大于1025px时 */
 @media (min-width: 1025px) {
     #card {
         padding: 40px;
@@ -148,3 +110,37 @@ button:disabled {
         font-size: 32px;
     }
 }
+
+/* 雪花样式 */
+.snowflake {
+    position: absolute;
+    top: -10%;
+    left: calc(5% + 90% * var(--random)); /* 随机位置 */
+    width: 20px; /* 雪花的宽度 */
+    height: 20px; /* 雪花的高度 */
+    background-image: url('images/雪花.png'); /* 雪花图片 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: var(--opacity); /* 可以调整透明度 */
+    animation: fall var(--duration) linear infinite;
+}
+
+/* 雪花下落动画 */
+@keyframes fall {
+    0% { top: -10%; opacity: 0; }
+    50% { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+}
+
+/* 为每个雪花元素指定随机特性 */
+.snowflake:nth-child(1) { --random: 0.1; --duration: 10s; --opacity: 0.7; }
+.snowflake:nth-child(2) { --random: 0.2; --duration: 12s; --opacity: 0.5; }
+.snowflake:nth-child(3) { --random: 0.3; --duration: 11s; --opacity: 0.6; }
+.snowflake:nth-child(4) { --random: 0.4; --duration: 9s;  --opacity: 0.8; }
+.snowflake:nth-child(5) { --random: 0.5; --duration: 13s; --opacity: 0.4; }
+.snowflake:nth-child(6) { --random: 0.6; --duration: 8s;  --opacity: 0.9; }
+.snowflake:nth-child(7) { --random: 0.7; --duration: 14s; --opacity: 0.3; }
+.snowflake:nth-child(8) { --random: 0.8; --duration: 7s;  --opacity: 1.0; }
+.snowflake:nth-child(9) { --random: 0.9; --duration: 15s; --opacity: 0.2; }
+.snowflake:nth-child(10) { --random: 1.0; --duration: 6s; --opacity: 0.9; }
+/* ...根据需要添加更多的雪花... */
