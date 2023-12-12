@@ -1,5 +1,5 @@
 body {
-    font-family: 'Cursive', sans-serif;
+    font-family: 'Arial', sans-serif;
     background-image: url('images/christmas-background.jpg'); /* 添加背景圖片 */
     background-size: cover; /* 確保圖片覆蓋整個網頁 */
     background-position: center; /* 將圖片置於中央 */
@@ -10,20 +10,32 @@ body {
 }
 
 #card {
-    background-color: rgba(255, 255, 255, 0.8); /* 為了讓文字容易閱讀，設定卡片背景為半透明白色 */
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
     border-radius: 15px;
     padding: 40px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* 保留原有的陰影效果 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     margin: auto;
     max-width: 400px;
+    animation: cardEntry 1s ease-in-out; /* 保留原有的卡片進入動畫 */
+}
+
+@keyframes cardEntry {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 h1 {
-    color: red; /* 保留原有的標題顏色 */
+    color: red;
 }
 
 button {
-    background-color: green; /* 保留原有的按鈕顏色 */
+    background-color: green;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -34,8 +46,13 @@ button {
 }
 
 button:hover {
-    background-color: darkgreen; /* 保留懸浮時的背景顏色 */
-    transform: scale(1.1); /* 添加按鈕放大效果 */
+    background-color: darkgreen; /* 深綠色懸浮背景 */
+    transform: scale(1.1); /* 放大效果 */
+}
+
+button:disabled {
+    background-color: grey; /* 點擊後變灰 */
+    cursor: default;
 }
 
 /* 響應式設計 */
@@ -46,4 +63,4 @@ button:hover {
     }
 }
 
-/* 可選擇添加一些節日裝飾元素，如雪花或星星的圖標 */
+/* 可選擇添加其他節日裝飾 */
