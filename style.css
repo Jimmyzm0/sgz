@@ -70,7 +70,7 @@ button:disabled {
     left: calc(5% + 90% * var(--random)); /* 隨機位置 */
     width: 50px; /* 雪花的寬度 */
     height: 50px; /* 雪花的高度 */
-    background-image: url('images/雪花.jpg'); /* 雪花圖片 */
+    background-image: url('images/雪花.png'); /* 雪花圖片 */
     background-size: contain;
     background-repeat: no-repeat;
     opacity: var(--opacity); /* 可以調整透明度 */
