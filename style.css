@@ -84,8 +84,18 @@ button:disabled {
 }
 
 /* 為每個雪花元素指定隨機特性 */
+/* ...原有的雪花樣式和動畫代碼... */
+
+/* 為每個雪花元素指定隨機特性 */
 .snowflake:nth-child(1) { --random: 0.1; --duration: 10s; --opacity: 0.7; }
 .snowflake:nth-child(2) { --random: 0.2; --duration: 12s; --opacity: 0.5; }
 .snowflake:nth-child(3) { --random: 0.3; --duration: 11s; --opacity: 0.6; }
+.snowflake:nth-child(4) { --random: 0.4; --duration: 9s;  --opacity: 0.8; }
+.snowflake:nth-child(5) { --random: 0.5; --duration: 13s; --opacity: 0.4; }
+.snowflake:nth-child(6) { --random: 0.6; --duration: 8s;  --opacity: 0.9; }
+.snowflake:nth-child(7) { --random: 0.7; --duration: 14s; --opacity: 0.3; }
+.snowflake:nth-child(8) { --random: 0.8; --duration: 7s;  --opacity: 1.0; }
+.snowflake:nth-child(9) { --random: 0.9; --duration: 15s; --opacity: 0.2; }
+.snowflake:nth-child(10) { --random: 1.0; --duration: 6s; --opacity: 0.9; }
 /* ...根據需要添加更多的雪花... */
 }
