@@ -63,15 +63,29 @@ button:disabled {
     }
 }
 
-/* 雪花背景 */
-.snowflakes {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 30%;
-    height: 30%;
-    background-image: url('images/雪花.jpg'); /* 替換為您的雪花圖片路徑 */
-    background-repeat: repeat;
-    background-position: center;
-    z-index: -1; /* 確保雪花在內容之後 */
+/* 雪花樣式 */
+.snowflake {
+    position: absolute;
+    top: -10%;
+    left: calc(5% + 90% * var(--random)); /* 隨機位置 */
+    width: 50px; /* 雪花的寬度 */
+    height: 50px; /* 雪花的高度 */
+    background-image: url('images/雪花.jpg'); /* 雪花圖片 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: var(--opacity); /* 可以調整透明度 */
+    animation: fall var(--duration) linear infinite;
+}
+
+/* 雪花下落動畫 */
+@keyframes fall {
+    0% { top: -10%; }
+    100% { top: 100%; }
+}
+
+/* 為每個雪花元素指定隨機特性 */
+.snowflake:nth-child(1) { --random: 0.1; --duration: 10s; --opacity: 0.7; }
+.snowflake:nth-child(2) { --random: 0.2; --duration: 12s; --opacity: 0.5; }
+.snowflake:nth-child(3) { --random: 0.3; --duration: 11s; --opacity: 0.6; }
+/* ...根據需要添加更多的雪花... */
 }
