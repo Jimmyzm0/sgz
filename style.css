@@ -1,5 +1,5 @@
 body {
-    font-family: 'Cursive', sans-serif;
+    font-family: 'Arial', sans-serif;
     background-image: url('images/christmas-background.jpg'); /* 添加背景圖片 */
     background-size: cover; /* 確保圖片覆蓋整個網頁 */
     background-position: center; /* 將圖片置於中央 */
@@ -16,7 +16,7 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     margin: auto;
     max-width: 400px;
-    animation: cardEntry 1s ease-in-out; /* 保留原有的卡片進入動畫 */
+    animation: cardEntry 1s ease-in-out; /* 卡片進入動畫 */
 }
 
 @keyframes cardEntry {
@@ -42,16 +42,16 @@ button {
     border-radius: 5px;
     font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s; /* 添加轉換效果 */
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
-    background-color: darkgreen; /* 深綠色懸浮背景 */
-    transform: scale(1.1); /* 放大效果 */
+    background-color: darkgreen;
+    transform: scale(1.1);
 }
 
 button:disabled {
-    background-color: grey; /* 點擊後變灰 */
+    background-color: grey;
     cursor: default;
 }
 
@@ -62,28 +62,16 @@ button:disabled {
         max-width: 100%;
     }
 }
-.snowflake {
-    color: #FFF;
-    font-size: 2em;
+
+/* 雪花背景 */
+.snowflakes {
     position: fixed;
-    top: -10%;
-    /* 給每個雪花隨機水平位置 */
-    left: calc(5% + 90% * var(--random));
-    opacity: var(--opacity);
-    transform: scale(var(--scale));
-    /* 隨機下落速度 */
-    animation: fall var(--duration) linear infinite;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/雪花.jpg'); /* 替換為您的雪花圖片路徑 */
+    background-repeat: repeat;
+    background-position: center;
+    z-index: -1; /* 確保雪花在內容之後 */
 }
-
-/* 動畫：雪花下落 */
-@keyframes fall {
-    0% { top: -10%; }
-    100% { top: 100%; }
-}
-
-/* 為每個雪花生成隨機特性 */
-.snowflake:nth-child(1) { --random: 0.1; --duration: 10s; --opacity: 0.7; --scale: 0.6; }
-.snowflake:nth-child(2) { --random: 0.2; --duration: 12s; --opacity: 0.5; --scale: 0.8; }
-.snowflake:nth-child(3) { --random: 0.3; --duration: 11s; --opacity: 0.6; --scale: 0.7; }
-/* ...為更多的雪花添加不同的特性... */
-/* 可選擇添加其他節日裝飾 */
