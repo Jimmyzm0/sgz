@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Cursive', sans-serif;
     background-image: url('images/christmas-background.jpg'); /* 添加背景圖片 */
     background-size: cover; /* 確保圖片覆蓋整個網頁 */
     background-position: center; /* 將圖片置於中央 */
@@ -100,4 +100,47 @@ button:disabled {
 .snowflake:nth-child(9) { --random: 0.9; --duration: 15s; --opacity: 0.2; }
 .snowflake:nth-child(10) { --random: 1.0; --duration: 6s; --opacity: 0.9; }
 /* ...根據需要添加更多的雪花... */
+}
+/* 响应式设计：适应小屏幕设备 */
+@media (max-width: 600px) {
+    #card {
+        padding: 20px;
+        margin: 10px;
+        max-width: 100%;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+/* 针对中等屏幕大小的样式调整 */
+@media (min-width: 601px) and (max-width: 1024px) {
+    #card {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
+
+/* 针对大屏幕大小的样式调整 */
+@media (min-width: 1025px) {
+    #card {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
 }
