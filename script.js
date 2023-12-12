@@ -10,15 +10,24 @@ function getRandomBlessing() {
     return blessings[randomIndex];
 }
 
-let isButtonClicked = false; // 跟蹤按鈕是否已經被點擊
+function checkButtonStatus() {
+    const buttonClicked = localStorage.getItem('buttonClicked');
+    if (buttonClicked === 'true') {
+        const button = document.getElementById('blessingButton');
+        button.disabled = true;
+    }
+}
+
+let isButtonClicked = false;
 
 document.getElementById('blessingButton').addEventListener('click', function() {
     if (!isButtonClicked) {
         const blessing = getRandomBlessing();
         document.getElementById('blessingText').textContent = blessing;
-        isButtonClicked = true; // 更新按鈕點擊狀態
-        this.disabled = true; // 禁用按鈕
-        localStorage.setItem('buttonClicked', 'true'); // 在本地存儲中設置標記
+        isButtonClicked = true;
+        this.disabled = true;
+        localStorage.setItem('buttonClicked', 'true');
     }
 });
-checkButtonStatus(); // 在頁面加載時檢查按鈕狀態
+
+checkButtonStatus();
