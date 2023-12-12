@@ -15,19 +15,23 @@ function checkButtonStatus() {
     if (buttonClicked === 'true') {
         const button = document.getElementById('blessingButton');
         button.disabled = true;
+        // 從本地存儲中讀取並顯示祝福語
+        const storedBlessing = localStorage.getItem('blessingText');
+        if (storedBlessing) {
+            document.getElementById('blessingText').textContent = storedBlessing;
+        }
     }
 }
 
-let isButtonClicked = false;
-
 document.getElementById('blessingButton').addEventListener('click', function() {
-    if (!isButtonClicked) {
-        const blessing = getRandomBlessing();
-        document.getElementById('blessingText').textContent = blessing;
-        isButtonClicked = true;
-        this.disabled = true;
-        localStorage.setItem('buttonClicked', 'true');
-    }
+    const blessing = getRandomBlessing();
+    document.getElementById('blessingText').textContent = blessing;
+
+    // 將祝福語存儲到本地存儲中
+    localStorage.setItem('blessingText', blessing);
+
+    localStorage.setItem('buttonClicked', 'true');
+    this.disabled = true;
 });
 
 checkButtonStatus();
