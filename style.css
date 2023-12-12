@@ -20,21 +20,11 @@ body {
     animation: cardEntry 1s ease-in-out; /* 卡片進入動畫 */
     text-align: center;
     background-color: rgba(255, 255, 255, 0.9); /* 轻微透明的白色背景增加可读性 */
-    border-radius: 10px; /* 圆角边框 */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* 轻微的阴影效果 */
     padding: 20px;
-    argin: auto;
+    margin: auto;
     max-width: 400px;
 }
-h1, #blessingText {
-    background-color: rgba(255, 255, 255, 0.9); /* 轻微透明的白色背景 */
-    border: 2px solid #D50000; /* 红色边框 */
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 轻微的阴影 */
-    margin: 10px 0; /* 添加一些外边距 */
-}
-
 h1 {
     color: #D50000; /* 圣诞红色 */
     font-size: 2.5em; /* 增大标题字体大小 */
@@ -46,22 +36,6 @@ h1 {
     font-size: 1.2em; /* 适当的字体大小 */
     padding: 15px; /* 内边距使文本更加舒展 */
     background-color: rgba(255, 255, 255, 0.8); /* 轻微透明的背景增加层次感 */
-    border-radius: 5px; /* 轻微的圆角 */
-}
-
-@keyframes cardEntry {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-h1 {
-    color: red;
 }
 
 button {
