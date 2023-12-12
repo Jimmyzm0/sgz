@@ -1,49 +1,44 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-image: url('images/christmas-background.jpg'); /* 添加背景圖片 */
-    background-size: cover; /* 確保圖片覆蓋整個網頁 */
-    background-position: center; /* 將圖片置於中央 */
-    background-repeat: no-repeat; /* 避免背景圖片重複 */
+    font-family: 'Cursive', sans-serif; /* 更節日風格的字體 */
+    background-image: url('path_to_your_christmas_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #333;
     text-align: center;
     padding: 20px;
 }
 
 #card {
-    background-color: rgba(255, 255, 255, 0.8); /* 為了讓文字容易閱讀，設定卡片背景為半透明白色 */
+    background-color: rgba(255, 255, 255, 0.9); /* 增加透明度以提高可讀性 */
     border-radius: 15px;
     padding: 40px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* 更明顯的陰影 */
     margin: auto;
     max-width: 400px;
-    transition: transform 0.3s ease-in-out; /* 添加過渡效果使卡片平滑出現 */
 }
 
 h1 {
-    color: red;
+    color: #D50000; /* 聖誕紅色 */
 }
 
 button {
-    background-color: green;
+    background-color: #4CAF50; /* 聖誕綠色 */
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s; /* 鼠標懸停時改變按鈕背景色 */
+    transition: all 0.3s;
 }
 
 button:hover {
-    background-color: darkgreen;
+    background-color: #087F23; /* 按鈕懸浮時的深綠色 */
+    transform: scale(1.05); /* 輕微放大效果 */
 }
 
-button:disabled {
-    background-color: grey;
-    cursor: default; /* 禁用按鈕時改變鼠標指針 */
-}
-
-/* 響應式設計的媒體查詢，適應小屏幕設備 */
+/* 響應式設計 */
 @media (max-width: 600px) {
     #card {
         padding: 20px;
@@ -51,18 +46,5 @@ button:disabled {
     }
 }
 
-/* 基本的動畫效果，使卡片有動態出現的感覺 */
-#card {
-    animation: cardEntry 1s ease-in-out;
-}
-
-@keyframes cardEntry {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+/* 其他裝飾效果 */
+/* 根據您的設計需求添加 */
