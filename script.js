@@ -41,13 +41,6 @@ document.getElementById('blessingButton').addEventListener('click', function() {
     localStorage.setItem('buttonClicked', 'true');
     this.disabled = true;
 
-    // 顯示複製按鈕
-    document.getElementById('copyButton').style.display = 'block';
-});
-
-document.getElementById('blessingButton').addEventListener('click', function() {
-    // ...原有的點擊事件處理...
-
     // 顯示複製圖標
     document.getElementById('copyIcon').style.display = 'block';
 });
