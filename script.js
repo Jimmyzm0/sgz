@@ -18,9 +18,7 @@ const blessings = [
 
 function getRandomBlessing() {
     const randomIndex = Math.floor(Math.random() * blessings.length);
-    const blessing = blessings[randomIndex];
-    console.log("選擇的祝福語：", blessing); // 添加這行來輸出祝福語
-    return blessing;
+    return blessings[randomIndex];
 }
 
 function checkButtonStatus() {
@@ -35,22 +33,22 @@ function checkButtonStatus() {
         }
     }
 }
+
 document.getElementById('blessingButton').addEventListener('click', function() {
-    console.log("按鈕被點擊");
     const blessing = getRandomBlessing();
-    document.getElementById('blessingContent').textContent = blessing; // 更新這裡
+    document.getElementById('blessingText').textContent = blessing;
     localStorage.setItem('blessingText', blessing);
     localStorage.setItem('buttonClicked', 'true');
     this.disabled = true;
 
     // 顯示複製圖標
-    document.getElementById('copyIcon').style.display = 'inline'; // 更改為 inline
-    }
+    document.getElementById('copyIcon').style.display = 'block';
+});
+
 document.getElementById('copyIcon').addEventListener('click', function() {
-    const blessingText = document.getElementById('blessingContent').textContent;
+    const blessingText = document.getElementById('blessingText').textContent;
     if (blessingText) {
         navigator.clipboard.writeText(blessingText).then(() => {
-            // 添加複製成功提示
             alert('祝福話術已複製到剪貼板！');
         }).catch(err => {
             alert('複製失敗：', err);
