@@ -166,11 +166,3 @@ h1, p {
 #copyIcon:hover {
     color: #367C39; /* 深綠色 */
 }
-#blessingContainer {
-    display: inline-block; /* 或者使用 flex 來更好地控制對齊 */
-}
-
-#blessingText, #copyIcon {
-    display: inline; /* 確保它們在同一行顯示 */
-    vertical-align: middle; /* 如有需要，調整垂直對齊 */
-}
