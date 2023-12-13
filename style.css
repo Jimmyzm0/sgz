@@ -156,10 +156,7 @@ h1, p {
     color: #4CAF50; /* 綠色 */
     font-size: 24px; /* 圖標大小 */
     display: none; /* 初始不顯示 */
-    position: absolute; /* 絕對定位 */
-    top: 50%; /* 垂直居中 */
-    right: 10px; /* 靠右邊一點 */
-    transform: translateY(-50%); /* 確保完全居中 */
+    margin-left: 10px; /* 添加一些左邊距 */
 }
 
 /* 複製圖標的懸停效果 */
