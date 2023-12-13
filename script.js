@@ -29,6 +29,14 @@ function copyToClipboard(text) {
     });
 }
 
+document.getElementById('blessingButton').addEventListener('click', function() {
+    const blessing = getRandomBlessing();
+    document.getElementById('blessingText').textContent = blessing;
+    // 點擊後自動複製祝福語
+    copyToClipboard(blessing);
+});
+
+// 檢查是否已經顯示過祝福語
 function checkButtonStatus() {
     const buttonClicked = localStorage.getItem('buttonClicked');
     if (buttonClicked === 'true') {
@@ -36,19 +44,8 @@ function checkButtonStatus() {
         const storedBlessing = localStorage.getItem('blessingText');
         if (storedBlessing) {
             document.getElementById('blessingText').textContent = storedBlessing;
-            // 自動複製祝福語
-            copyToClipboard(storedBlessing);
         }
-    } else {
-        // 第一次進入頁面時顯示祝福語
-        const blessing = getRandomBlessing();
-        document.getElementById('blessingText').textContent = blessing;
-        localStorage.setItem('blessingText', blessing);
-        localStorage.setItem('buttonClicked', 'true');
-        // 自動複製祝福語
-        copyToClipboard(blessing);
     }
 }
 
-// 檢查按鈕狀態並顯示祝福語
 checkButtonStatus();
