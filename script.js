@@ -34,15 +34,18 @@ function checkButtonStatus() {
     }
 }
 
-document.getElementById('blessingButton').addEventListener('click', function() {
-    const blessing = getRandomBlessing();
-    document.getElementById('blessingContent').textContent = blessing; // 更新這裡
-    localStorage.setItem('blessingText', blessing);
-    localStorage.setItem('buttonClicked', 'true');
-    this.disabled = true;
-
-    // 顯示複製圖標
-    document.getElementById('copyIcon').style.display = 'inline'; // 更改為 inline
+document.getElementById('copyIcon').addEventListener('click', function() {
+    const blessingText = document.getElementById('blessingContent').textContent;
+    if (blessingText) {
+        navigator.clipboard.writeText(blessingText).then(() => {
+            // 添加複製成功提示
+            alert('祝福話術已複製到剪貼板！');
+        }).catch(err => {
+            alert('複製失敗：', err);
+        });
+    } else {
+        alert('沒有祝福話術可複製！');
+    }
 });
 
 checkButtonStatus();
