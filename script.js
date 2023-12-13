@@ -36,21 +36,22 @@ function checkButtonStatus() {
 
 document.getElementById('blessingButton').addEventListener('click', function() {
     const blessing = getRandomBlessing();
-    document.getElementById('blessingContent').textContent = blessing; // 更新祝福文本
-    document.getElementById('copyIcon').style.display = 'inline'; // 顯示複製圖標
-
+    document.getElementById('blessingText').textContent = blessing;
     localStorage.setItem('blessingText', blessing);
     localStorage.setItem('buttonClicked', 'true');
     this.disabled = true;
+
+    // 顯示複製圖標
+    document.getElementById('copyIcon').style.display = 'block';
 });
 
 document.getElementById('copyIcon').addEventListener('click', function() {
-    const blessingText = document.getElementById('blessingText').textContent.trim();
+    const blessingText = document.getElementById('blessingText').textContent;
     if (blessingText) {
         navigator.clipboard.writeText(blessingText).then(() => {
             alert('祝福話術已複製到剪貼板！');
         }).catch(err => {
-            alert('複製失敗：' + err);
+            alert('複製失敗：', err);
         });
     } else {
         alert('沒有祝福話術可複製！');
