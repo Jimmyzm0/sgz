@@ -153,8 +153,8 @@ h1, p {
 /* 設置複製圖標的樣式 */
 #copyIcon {
     cursor: pointer;
-    color: #4CAF50; /* 綠色 */
-    font-size: 24px; /* 圖標大小 */
+    color: black; /* 更改為黑色 */
+    font-size: 16px; /* 調整圖標大小 */
     display: none; /* 初始不顯示 */
     margin-left: 10px; /* 添加一些左邊距 */
 }
