@@ -38,32 +38,9 @@ document.getElementById('blessingButton').addEventListener('click', function() {
     const blessing = getRandomBlessing();
     document.getElementById('blessingText').textContent = blessing;
 
-    // 將祝福語存儲到本地存儲中
     localStorage.setItem('blessingText', blessing);
-
     localStorage.setItem('buttonClicked', 'true');
     this.disabled = true;
-
-    // 收集數字ID
-    const playerID = document.getElementById('playerID').value;
-    const infoMessage = document.getElementById('infoMessage');
-
-    if (playerID) {
-        localStorage.setItem('playerID', playerID);
-        
-        // 顯示收集成功消息
-        infoMessage.textContent = '信息已成功收集！';
-        infoMessage.style.color = 'green';
-
-        // 清除消息
-        setTimeout(function() {
-            infoMessage.textContent = '';
-        }, 3000); // 3秒後清除消息
-    } else {
-        // 如果數字ID不存在，顯示錯誤消息
-        infoMessage.textContent = '請輸入數字ID';
-        infoMessage.style.color = 'red';
-    }
 });
 
 checkButtonStatus();
