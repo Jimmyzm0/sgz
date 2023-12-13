@@ -21,41 +21,34 @@ function getRandomBlessing() {
     return blessings[randomIndex];
 }
 
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        alert('祝福話術已複製到剪貼板！');
+    }).catch(err => {
+        alert('複製失敗：', err);
+    });
+}
+
 function checkButtonStatus() {
     const buttonClicked = localStorage.getItem('buttonClicked');
     if (buttonClicked === 'true') {
-        const button = document.getElementById('blessingButton');
-        button.disabled = true;
         // 從本地存儲中讀取並顯示祝福語
         const storedBlessing = localStorage.getItem('blessingText');
         if (storedBlessing) {
             document.getElementById('blessingText').textContent = storedBlessing;
+            // 自動複製祝福語
+            copyToClipboard(storedBlessing);
         }
+    } else {
+        // 第一次進入頁面時顯示祝福語
+        const blessing = getRandomBlessing();
+        document.getElementById('blessingText').textContent = blessing;
+        localStorage.setItem('blessingText', blessing);
+        localStorage.setItem('buttonClicked', 'true');
+        // 自動複製祝福語
+        copyToClipboard(blessing);
     }
 }
 
-document.getElementById('blessingButton').addEventListener('click', function() {
-    const blessing = getRandomBlessing();
-    document.getElementById('blessingText').textContent = blessing;
-    localStorage.setItem('blessingText', blessing);
-    localStorage.setItem('buttonClicked', 'true');
-    this.disabled = true;
-
-    // 顯示複製圖標
-    document.getElementById('copyIcon').style.display = 'block';
-});
-
-document.getElementById('copyIcon').addEventListener('click', function() {
-    const blessingText = document.getElementById('blessingText').textContent;
-    if (blessingText) {
-        navigator.clipboard.writeText(blessingText).then(() => {
-            alert('祝福話術已複製到剪貼板！');
-        }).catch(err => {
-            alert('複製失敗：', err);
-        });
-    } else {
-        alert('沒有祝福話術可複製！');
-    }
-});
-
+// 檢查按鈕狀態並顯示祝福語
 checkButtonStatus();
