@@ -34,12 +34,10 @@ function checkButtonStatus() {
     }
 }
 
-ddocument.getElementById('blessingButton').addEventListener('click', function() {
+document.getElementById('blessingButton').addEventListener('click', function() {
     const blessing = getRandomBlessing();
-    const blessingTextElement = document.getElementById('blessingText');
-    blessingTextElement.textContent = blessing;
-    // 顯示複製圖標
-    document.getElementById('copyIcon').style.display = 'inline';
+    document.getElementById('blessingContent').textContent = blessing; // 更新祝福文本
+    document.getElementById('copyIcon').style.display = 'inline'; // 顯示複製圖標
 
     localStorage.setItem('blessingText', blessing);
     localStorage.setItem('buttonClicked', 'true');
