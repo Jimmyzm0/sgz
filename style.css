@@ -144,22 +144,25 @@ button:disabled {
 .snowflake:nth-child(9) { --random: 0.9; --duration: 15s; --opacity: 0.2; }
 .snowflake:nth-child(10) { --random: 1.0; --duration: 6s; --opacity: 0.9; }
 /* ...根据需要添加更多的雪花... */
-/* 設置複製按鈕的樣式 */
-#copyButton {
-    background-color: #4CAF50; /* 綠色背景 */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    margin-top: 10px; /* 與其他元素的距離 */
-    display: none; /* 初始不顯示 */
+/* 調整標題和段落的間距 */
+h1, p {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-/* 複製按鈕的懸停效果 */
-#copyButton:hover {
-    background-color: #367C39; /* 深綠色 */
-    transform: scale(1.05);
+/* 設置複製圖標的樣式 */
+#copyIcon {
+    cursor: pointer;
+    color: #4CAF50; /* 綠色 */
+    font-size: 24px; /* 圖標大小 */
+    display: none; /* 初始不顯示 */
+    position: absolute; /* 絕對定位 */
+    top: 50%; /* 垂直居中 */
+    right: 10px; /* 靠右邊一點 */
+    transform: translateY(-50%); /* 確保完全居中 */
+}
+
+/* 複製圖標的懸停效果 */
+#copyIcon:hover {
+    color: #367C39; /* 深綠色 */
 }
