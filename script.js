@@ -45,7 +45,14 @@ document.getElementById('blessingButton').addEventListener('click', function() {
     document.getElementById('copyButton').style.display = 'block';
 });
 
-document.getElementById('copyButton').addEventListener('click', function() {
+document.getElementById('blessingButton').addEventListener('click', function() {
+    // ...原有的點擊事件處理...
+
+    // 顯示複製圖標
+    document.getElementById('copyIcon').style.display = 'block';
+});
+
+document.getElementById('copyIcon').addEventListener('click', function() {
     const blessingText = document.getElementById('blessingText').textContent;
     if (blessingText) {
         navigator.clipboard.writeText(blessingText).then(() => {
