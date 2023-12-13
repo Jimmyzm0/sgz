@@ -34,14 +34,17 @@ function checkButtonStatus() {
     }
 }
 
-document.getElementById('blessingButton').addEventListener('click', function() {
+ocument.getElementById('blessingButton').addEventListener('click', function() {
     const blessing = getRandomBlessing();
     document.getElementById('blessingText').textContent = blessing;
-
     localStorage.setItem('blessingText', blessing);
     localStorage.setItem('buttonClicked', 'true');
     this.disabled = true;
+
+    // 顯示複製按鈕
+    document.getElementById('copyButton').style.display = 'block';
 });
+
 document.getElementById('copyButton').addEventListener('click', function() {
     const blessingText = document.getElementById('blessingText').textContent;
     if (blessingText) {
