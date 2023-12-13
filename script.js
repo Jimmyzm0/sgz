@@ -25,9 +25,8 @@ function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(() => {
         const confirmation = document.getElementById('copyConfirmation');
         confirmation.style.display = 'block'; // 顯示提示
-        setTimeout(() => { confirmation.style.display = 'none'; }, 3000); // 3秒後隱藏提示
+        confirmation.classList.add('flip-in'); // 添加翻轉效果
     }).catch(err => {
-        // 處理複製失敗的情況
         console.error('複製失敗：', err);
     });
 }
