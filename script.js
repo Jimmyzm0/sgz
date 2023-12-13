@@ -34,7 +34,7 @@ function checkButtonStatus() {
     }
 }
 
-ocument.getElementById('blessingButton').addEventListener('click', function() {
+document.getElementById('blessingButton').addEventListener('click', function() {
     const blessing = getRandomBlessing();
     document.getElementById('blessingText').textContent = blessing;
     localStorage.setItem('blessingText', blessing);
