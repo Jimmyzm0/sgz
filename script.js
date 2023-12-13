@@ -45,12 +45,12 @@ document.getElementById('blessingButton').addEventListener('click', function() {
 });
 
 document.getElementById('copyIcon').addEventListener('click', function() {
-    const blessingText = document.getElementById('blessingText').textContent;
+    const blessingText = document.getElementById('blessingText').textContent.trim();
     if (blessingText) {
         navigator.clipboard.writeText(blessingText).then(() => {
             alert('祝福話術已複製到剪貼板！');
         }).catch(err => {
-            alert('複製失敗：', err);
+            alert('複製失敗：' + err);
         });
     } else {
         alert('沒有祝福話術可複製！');
