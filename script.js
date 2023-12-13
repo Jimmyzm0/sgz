@@ -34,15 +34,16 @@ function checkButtonStatus() {
     }
 }
 
-document.getElementById('blessingButton').addEventListener('click', function() {
+ddocument.getElementById('blessingButton').addEventListener('click', function() {
     const blessing = getRandomBlessing();
-    document.getElementById('blessingText').textContent = blessing;
+    const blessingTextElement = document.getElementById('blessingText');
+    blessingTextElement.textContent = blessing;
+    // 顯示複製圖標
+    document.getElementById('copyIcon').style.display = 'inline';
+
     localStorage.setItem('blessingText', blessing);
     localStorage.setItem('buttonClicked', 'true');
     this.disabled = true;
-
-    // 顯示複製圖標
-    document.getElementById('copyIcon').style.display = 'block';
 });
 
 document.getElementById('copyIcon').addEventListener('click', function() {
