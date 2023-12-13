@@ -13,16 +13,19 @@ body {
 
 /* 设置卡片的样式 */
 #card {
-    position: fixed; /* 使用固定位置 */
-    top: 0; /* 與頂部對齊 */
-    left: 0; /* 與左側對齊 */
-    width: 100%; /* 寬度為全屏 */
-    height: 100%; /* 高度為全屏 */
-    background-color: rgba(255, 255, 255, 0.9); /* 半透明背景 */
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
+    border-radius: 15px;
     padding: 40px;
-    box-shadow: none;
-    overflow: auto; /* 允许滚动 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    max-width: 400px;
+    animation: cardEntry 1s ease-in-out; /* 卡片進入動畫 */
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* 轻微透明的白色背景增加可读性 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* 轻微的阴影效果 */
+    padding: 20px; /* 调整内边距 */
+    margin: auto; /* 水平居中 */
+    max-width: 400px; /* 设置最大宽度 */
 }
 
 /* 设置标题的样式 */
