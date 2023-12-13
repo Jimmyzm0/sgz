@@ -18,7 +18,9 @@ const blessings = [
 
 function getRandomBlessing() {
     const randomIndex = Math.floor(Math.random() * blessings.length);
-    return blessings[randomIndex];
+    const blessing = blessings[randomIndex];
+    console.log("選擇的祝福語：", blessing); // 添加這行來輸出祝福語
+    return blessing;
 }
 
 function checkButtonStatus() {
@@ -34,6 +36,7 @@ function checkButtonStatus() {
     }
 }
 document.getElementById('blessingButton').addEventListener('click', function() {
+    console.log("按鈕被點擊");
     const blessing = getRandomBlessing();
     document.getElementById('blessingContent').textContent = blessing; // 更新這裡
     localStorage.setItem('blessingText', blessing);
