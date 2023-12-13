@@ -144,7 +144,6 @@ button:disabled {
 .snowflake:nth-child(9) { --random: 0.9; --duration: 15s; --opacity: 0.2; }
 .snowflake:nth-child(10) { --random: 1.0; --duration: 6s; --opacity: 0.9; }
 /* ...根据需要添加更多的雪花... */
-
 /* 調整標題和段落的間距 */
 h1, p {
     margin-top: 10px;
@@ -157,8 +156,10 @@ h1, p {
     color: #4CAF50; /* 綠色 */
     font-size: 24px; /* 圖標大小 */
     display: none; /* 初始不顯示 */
-    margin-left: 10px; /* 在圖標和文字之間添加間隔 */
-    vertical-align: middle; /* 與文字垂直對齊 */
+    position: absolute; /* 絕對定位 */
+    top: 50%; /* 垂直居中 */
+    right: 10px; /* 靠右邊一點 */
+    transform: translateY(-50%); /* 確保完全居中 */
 }
 
 /* 複製圖標的懸停效果 */
