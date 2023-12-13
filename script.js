@@ -23,9 +23,12 @@ function getRandomBlessing() {
 
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(() => {
-        alert('祝福話術已複製到剪貼板！');
+        const confirmation = document.getElementById('copyConfirmation');
+        confirmation.style.display = 'block'; // 顯示提示
+        setTimeout(() => { confirmation.style.display = 'none'; }, 3000); // 3秒後隱藏提示
     }).catch(err => {
-        alert('複製失敗：', err);
+        // 處理複製失敗的情況
+        console.error('複製失敗：', err);
     });
 }
 
