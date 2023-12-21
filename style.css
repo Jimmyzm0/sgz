@@ -1,71 +1,54 @@
-/* 设置整个页面的字体和背景 */
 body {
     font-family: 'Cursive', sans-serif;
-    background-image: url('images/christmas-background.jpg'); /* 添加背景圖片 */
-    background-size: cover; /* 確保圖片覆蓋整個網頁 */
-    background-position: center; /* 將圖片置於中央 */
-    background-repeat: no-repeat; /* 避免背景圖片重複 */
+    background-image: url('images/christmas-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #333;
     text-align: center;
-    padding: 20px;
-    overflow: hidden; /* 防止在整个页面上出现滚动条 */
+    padding: 10px; /* 从20px减半到10px */
+    overflow: hidden;
 }
 
-/* 设置卡片的样式 */
 #card {
-    background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
-    padding: 40px;
+    padding: 20px; /* 从40px减半到20px */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     margin: auto;
-    max-width: 400px;
-    animation: cardEntry 1s ease-in-out; /* 卡片進入動畫 */
+    max-width: 200px; /* 从400px减半到200px */
+    animation: cardEntry 1s ease-in-out;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.9); /* 轻微透明的白色背景增加可读性 */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* 轻微的阴影效果 */
-    padding: 20px; /* 调整内边距 */
-    margin: auto; /* 水平居中 */
-    max-width: 400px; /* 设置最大宽度 */
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 10px; /* 从20px减半到10px */
+    margin: auto;
+    max-width: 200px; /* 从400px减半到200px */
 }
 
-/* 设置标题的样式 */
 h1 {
-    color: #D50000; /* 圣诞红色 */
-    font-size: 2.5em; /* 增大标题字体大小 */
-    margin-bottom: 20px; /* 在标题和文本之间添加一些空间 */
+    color: #D50000;
+    font-size: 1.25em; /* 从2.5em减半到1.25em */
+    margin-bottom: 10px; /* 从20px减半到10px */
 }
 
-/* 设置祝福文本的样式 */
 #blessingText {
-    color: #333; /* 深色文字，增加对比 */
-    font-size: 1.2em; /* 适当的字体大小 */
-    padding: 15px; /* 内边距使文本更加舒展 */
-    background-color: rgba(255, 255, 255, 0.8); /* 轻微透明的背景增加层次感 */
+    color: #333;
+    font-size: 0.6em; /* 从1.2em减半到0.6em */
+    padding: 7.5px; /* 从15px减半到7.5px */
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* 设置按钮的样式 */
 button {
     background-color: green;
     color: white;
-    padding: 10px 20px;
+    padding: 5px 10px; /* 从10px 20px减半到5px 10px */
     border: none;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 9px; /* 从18px减半到9px */
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-    margin-top: 20px; /* 在按钮和文本之间添加一些空间 */
-}
-
-/* 鼠标悬停按钮时的样式 */
-button:hover {
-    background-color: darkgreen;
-    transform: scale(1.1);
-}
-
-/* 禁用按钮的样式 */
-button:disabled {
-    background-color: grey;
-    cursor: default;
+    margin-top: 10px; /* 从20px减半到10px */
 }
 
 /* 响应式设计 - 当屏幕宽度小于600px时 */
