@@ -28,7 +28,7 @@ body {
 
 h1 {
     color: #D50000;
-    font-size: 1.25em; /* 从2.5em减半到1.25em */
+    font-size: 0.625em; /* 从2.5em减半到1.25em */
     margin-bottom: 10px; /* 从20px减半到10px */
 }
 
